@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Quản lý nhân viên"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#0F7E13"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Mã nhân viên: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="left|center_vertical"
+            android:layout_width="135dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/edittext_manhanvien"
+            android:hint="Vui lòng nhập mã nhân viên"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Tên nhân viên: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="left|center_vertical"
+            android:layout_width="135dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/edittext_tennhanvien"
+            android:hint="Vui lòng nhập tên nhân viên"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Loại nhân viên: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="left|center_vertical"
+            android:layout_width="135dp"
+            android:layout_height="50dp"/>
+
+       <RadioGroup
+           android:id="@+id/radiogroup_loai"
+           android:orientation="horizontal"
+           android:weightSum="2"
+           android:layout_width="match_parent"
+           android:layout_height="50dp">
+
+           <RadioButton
+               android:id="@+id/radiobutton_chinhthuc"
+               android:text="Chính thức"
+               android:textSize="20sp"
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"/>
+           <RadioButton
+               android:id="@+id/radiobutton_thoivu"
+               android:text="Thời vụ"
+               android:textSize="20sp"
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"/>
+       </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_nhapnhanvien"
+        android:layout_marginLeft="135dp"
+        android:text="Nhập nhân viên"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <TextView
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#0F7E13"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <ListView
+        android:id="@+id/listview_nhanvien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
