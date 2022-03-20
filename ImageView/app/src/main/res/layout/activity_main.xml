@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_rutlabai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E53935"
+        android:text="Rút ngẫu nhiên 3 lá bài" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageview1"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/b1fv" />
+
+        <ImageView
+            android:id="@+id/imageview2"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/b1fv" />
+
+        <ImageView
+            android:id="@+id/imageview3"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/b1fv" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textview_ketqua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kết quả"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#0A5EB7"/>
+
+</LinearLayout>

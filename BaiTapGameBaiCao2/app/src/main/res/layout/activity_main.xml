@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1C9C9"
+    android:orientation="vertical"
+    android:weightSum="20"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/tvSoTranMay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="Win: 0"
+            android:textColor="#C60B0B"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="right"
+            android:textColor="@color/black"
+            android:text="Máy 1"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/user" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+        <EditText
+            android:id="@+id/edtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="Nhập số phút"
+            android:inputType="number"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="00:00"
+            android:inputType="number"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:background="#EE0A0A"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <TextView
+                android:id="@+id/tvKetQuaMay"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Điểm 1"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="15">
+
+                <ImageView
+                    android:id="@+id/imvMay1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="4" />
+
+                <ImageView
+                    android:id="@+id/imvMay2"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="4" />
+
+                <ImageView
+                    android:id="@+id/imvMay3"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="4" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/imbPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="#FFC107"
+            android:text="Bắt đầu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="15">
+
+                <ImageView
+                    android:id="@+id/imvLa1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="4" />
+
+                <ImageView
+                    android:id="@+id/imvLa2"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="4" />
+
+                <ImageView
+                    android:id="@+id/imvLa3"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="4" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvKetQuaBan"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Điểm 2"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:background="#EE0A0A"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="Máy 2"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvSoTranBan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textColor="#C60B0B"
+            android:text="Win: 0"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</LinearLayout>

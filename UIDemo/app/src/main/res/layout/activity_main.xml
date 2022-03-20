@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_thoat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="#1952E2"
+        android:text="Thoát" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgview_anhdaidien"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_anhdaidien"
+            android:text="Chọn ảnh"
+            android:textAllCaps="false"
+            android:layout_gravity="bottom"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:backgroundTint="#EE0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edittext_ma"
+            android:layout_width="160dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Nhập mã"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edittext_ten"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:hint="Nhập tên"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Giới tính: "
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_gioitinh"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_nu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_nam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Đơn vị: "
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner_donvi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_them"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#1952E2"
+            android:textSize="18sp"
+            android:text="Thêm" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="@color/white"
+            android:id="@+id/button_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:backgroundTint="#1952E2"
+            android:textSize="18sp"
+            android:text="Sửa" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_truyvan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#1952E2"
+            android:textSize="18sp"
+            android:text="Tìm" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_ghi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#1952E2"
+            android:textSize="18sp"
+            android:text="Ghi" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#1952E2"
+            android:textSize="18sp"
+            android:text="Đọc" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_nhanvien"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
