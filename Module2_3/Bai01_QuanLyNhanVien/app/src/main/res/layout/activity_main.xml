@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Quản lý nhân viên"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="#328335"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Mã nhân viên: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:layout_width="140dp"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/edittext_manhanvien"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Tên nhân viên: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:layout_width="140dp"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/edittext_tennhanvien"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Giới tính: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:layout_width="140dp"
+            android:layout_height="40dp"/>
+        <RadioGroup
+            android:id="@+id/radiogroup_gioitinh"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <RadioButton
+                android:id="@+id/radiobutton_nu"
+                android:text="Nữ"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/radiobutton_nam"
+                android:text="Nam"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:id="@+id/button_nhap"
+        android:text="Nhập  nhân viên"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginLeft="140dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Danh sách nhân viên: "
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:background="#328335"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+        <ImageButton
+            android:id="@+id/imagebutton_xoa"
+            android:src="@drawable/ic_delete_32"
+            android:layout_marginLeft="-35dp"
+            android:layout_gravity="center"
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listview_nhanvien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
