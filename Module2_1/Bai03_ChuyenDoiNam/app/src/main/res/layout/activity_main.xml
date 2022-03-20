@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Năm dương lịch: "
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+        <TextView
+            android:text=""
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"/>
+        <TextView
+            android:text="Năm âm lịch: "
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText_namDuong"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/button_chuyenDoiNam"
+            android:textSize="22sp"
+            android:text="Chuyển đổi"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#E53935"/>
+
+        <TextView
+            android:id="@+id/textView_ketQuaNamAm"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="#C60404"
+            android:hint="Kết quả"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bai06_ListViewActivity</string>
+
+    <string-array name="listview_name">
+        <item>Nguyễn</item>
+        <item>Thị</item>
+        <item>Hảo</item>
+        <item>Ngọc</item>
+        <item>Hương</item>
+        <item>Chinh</item>
+        <item>Nga</item>
+        <item>Đặng</item>
+        <item>Kim</item>
+        <item>Văn</item>
+        <item>Hoàng</item>
+    </string-array>
+</resources>
