@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/HK6/Lap_Trinh_Thiet_Bi_Di_Dong/Thuc_Hanh/ListView/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/HK6/Lap_Trinh_Thiet_Bi_Di_Dong/Thuc_Hanh/ListView/app/src/main/res/layout/activity_2.xml" value="0.128" />
+        <entry key="..\:/HK6/Lap_Trinh_Thiet_Bi_Di_Dong/Thuc_Hanh/ListView/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/HK6/Lap_Trinh_Thiet_Bi_Di_Dong/Thuc_Hanh/ListView/app/src/main/res/layout/custom_gridview.xml" value="0.128" />
       </map>
     </option>
   </component>
