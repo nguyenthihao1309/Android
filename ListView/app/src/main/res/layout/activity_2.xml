@@ -13,7 +13,7 @@
         android:paddingTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:layout_height="400dp" />
+        android:layout_height="320dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -21,22 +21,25 @@
         <TextView
             android:id="@+id/tv_guiTen"
             android:layout_width="250dp"
-            android:textSize="16sp"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_height="wrap_content"/>
+            android:layout_height="30dp"/>
         <TextView
             android:id="@+id/tv_guiGia"
             android:layout_width="100dp"
-            android:textSize="14sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:textColor="#F44336"
-            android:layout_height="wrap_content"/>
+            android:layout_height="30dp"/>
         <ImageView
             android:id="@+id/imageview_giohang"
             android:src="@drawable/shopping_cart"
             android:layout_gravity="right"
             android:layout_marginEnd="10dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
     </LinearLayout>
 
 
@@ -47,6 +50,8 @@
             android:id="@+id/textview_thongtinchitiet"
             android:textColor="@color/black"
             android:textSize="16sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </ScrollView>
