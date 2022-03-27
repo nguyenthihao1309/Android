@@ -27,6 +27,65 @@ public class MainActivity extends AppCompatActivity {
 //        listItems = getResources().getStringArray(R.array.traicay_array);
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listItems);
         sanPhams = new ArrayList<>();
+        addSanPham();
+        MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.custom_gridview, sanPhams);
+
+        gv_traicay.setAdapter(adapter);
+        gv_traicay.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Toast.makeText(MainActivity.this, sanPhams.get(i)+"", Toast.LENGTH_SHORT).show();
+                SanPham sanPham =   sanPhams.get(i);
+                int hinh  = sanPham.getHinhAnh();
+                double gia = sanPham.getGiaSanPham();
+                String ten = sanPham.getTenSanPham();
+                String mota = sanPham.getThongTinChiTiet();
+
+                Intent intent = new Intent(MainActivity.this, Activity2.class);
+
+                intent.putExtra("hinh", hinh);
+                intent.putExtra("ten", ten);
+                intent.putExtra("gia", gia);
+                intent.putExtra("mota", mota);
+                startActivity(intent);
+            }
+        });
+
+    /*    ListView listView = findViewById(R.id.listview_traicay);
+        //Laáy ra danh sách item trong string.xml
+        listItems = getResources().getStringArray(R.array.traicay_array);
+        //sử dụng Adapter để đưa danh sách item vào listview
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listItems);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String st = listItems[i];
+                Toast.makeText(MainActivity.this, st, Toast.LENGTH_LONG).show();
+
+            }
+        });*/
+/*        Spinner spinner = findViewById(R.id.spinner_traicay);
+        //Laáy ra danh sách item trong string.xml
+        listItems = getResources().getStringArray(R.array.traicay_array);
+        //sử dụng Adapter để đưa danh sách item vào listview
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItems);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String st = listItems[i];
+                Toast.makeText(MainActivity.this, st, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });*/
+    }
+
+    private void addSanPham(){
         sanPhams.add(new SanPham(1,"Vinamilk", R.drawable.vinamilk, 6900,"Thương hiệu: " + "Vinamilk\n" +
                 "Xuất xứ: " + "Việt Nam\n" +
                 "Hạn sử dụng: " + "6 tháng\n" +
@@ -112,60 +171,41 @@ public class MainActivity extends AppCompatActivity {
                 "\n• Nguyên liệu chính để sản xuất trà xanh vị chanh tự nhiên : lá trà shan tuyết tuyển chọn từ cao nguyên hà gian - vùng nguyên liệu trà nổi tiếng ở độ cao trên 700m\n" +
                 "• Nguyên liệu hoàn toàn tự nhiên.không phụ gia tổng hợp, không chất bảo quản\n" +
                 "• cổ chai rộng mang đến trải nghiệm uống sảng khoái "));
-        MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.custom_gridview, sanPhams);
-
-        gv_traicay.setAdapter(adapter);
-        gv_traicay.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, sanPhams.get(i)+"", Toast.LENGTH_SHORT).show();
-                SanPham sanPham =   sanPhams.get(i);
-                int hinh  = sanPham.getHinhAnh();
-                double gia = sanPham.getGiaSanPham();
-                String ten = sanPham.getTenSanPham();
-                String mota = sanPham.getThongTinChiTiet();
-
-                Intent intent = new Intent(MainActivity.this, Activity2.class);
-
-                intent.putExtra("hinh", hinh);
-                intent.putExtra("ten", ten);
-                intent.putExtra("gia", gia);
-                intent.putExtra("mota", mota);
-                startActivity(intent);
-            }
-        });
-
-    /*    ListView listView = findViewById(R.id.listview_traicay);
-        //Laáy ra danh sách item trong string.xml
-        listItems = getResources().getStringArray(R.array.traicay_array);
-        //sử dụng Adapter để đưa danh sách item vào listview
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listItems);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String st = listItems[i];
-                Toast.makeText(MainActivity.this, st, Toast.LENGTH_LONG).show();
-
-            }
-        });*/
-/*        Spinner spinner = findViewById(R.id.spinner_traicay);
-        //Laáy ra danh sách item trong string.xml
-        listItems = getResources().getStringArray(R.array.traicay_array);
-        //sử dụng Adapter để đưa danh sách item vào listview
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItems);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String st = listItems[i];
-                Toast.makeText(MainActivity.this, st, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });*/
+        sanPhams.add(new SanPham(8, "Nước mắm Nam Ngư",R.drawable.nuoc_mam_nam_ngu ,46000, "Xuất xứ: Công Ty LD CBTP VITECFOOD\n" +
+                "\n" +
+                "Thành phần: Nước, muối, đạm cá cơm, đường, chất điều vị, chất bảo quản, sodium benzoate, urê nội sinh dưới 0.025%, chất ổn định, màu tổng hợp, màu caramen, hương cá hồi…\n" +
+                "\n" +
+                "Quy cách: 900ml/Chai\n" +
+                "\n" +
+                "Đơn vị tính: Chai\n" +
+                "\n" +
+                "Sử dụng: Dùng để chấm, nêm, nấu hay tẩm ướp với nhiều món ăn.\n" +
+                "\n" +
+                "Bảo quản: Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp."));
+        sanPhams.add(new SanPham(9,"Bánh Ngũ Cốc Ăn Sáng Weetabix", R.drawable.weetabix, 1694000, "Nhà cung cấp: Csfood\n" +
+                "Thương hiệu: Weetabix\n" +
+                "Xuất xứ: Anh\n"+
+                "Thành phần: lúa mì nguyên hạt, chiết xuất từ mạch nha- lúa mạch, đường, muối\n" +
+                "Quy cách: hộp 430g x thùng 14 hộp\n" +
+                "Đơn vị tính: thùng\n" +
+                "Sử dụng: dùng trực tiếp\n" +
+                "Bảo quản: ở nhiệt độ thoáng mát, tránh ánh nắng trực tiếp."));
+        sanPhams.add(new SanPham(9,"Bột bánh cuốn", R.drawable.bot_banh_cuon, 17400, "Xuất xứ: Công Ty Cổ Phần Bột Thực Phẩm Tài Ký\n"+
+                "Thành phần: Bột gạo, tinh bột khoai mì.\n" +
+                "Quy cách: 400g\n" +
+                "Đơn vị tính: Gói\n" +
+                "Sử dụng: dùng chế biến món ăn\n" +
+                "Bảo quản: Nơi khô ráo, thoáng mát, tránh ánh nắng mặt trời\n"+
+                "Cách dùng sản phẩm:\n" +
+                "\tBước 1: pha bột bánh cuốn 400g + 1 lít nước + 1 thìa dầu ăn.\n" +
+                "\tBước 2: làm nhân bánh gồm có thịt nạc, hành tây, nấm mèo bâm nhỏ xào chín.\n" +
+                "\tBước 3: tráng bánh – cho bột vào chảo chống dính, tráng mỏng, đậy nắp 15 giây, lấy bánh bằng cách úp chảo xuống măm có thoa dầu.\n" +
+                "\tBước 4: Cho nhân vào giữa bánh và cuốn bánh lại, bánh dùng với giá trụng, rau thơm cắt nhỏ, hành phi, chả lụa và nước mắm pha."));
+        sanPhams.add(new SanPham(10, "Bánh quy Olak", R.drawable.banh_quy_olak,80000,"Xuất xứ: Công Ty TNHH Thực Phẩm Kim Hùng\n" +
+                "Thành phần: Bột mì, đường, chất béo thực vật, sữa bột, bơn trứng, muối, chất tạo nhũ, vani, hương sữa, hương hoa quả…\n" +
+                "Quy cách: 360g/Hộp\n" +
+                "Đơn vị tính: Hộp\n" +
+                "Sử dụng: Ăn trực tiếp\n" +
+                "Bảo quản: Bảo quản nơi khô ráo, thoáng mát, sạch sẽ, tránh ánh nắng trực tiếp"));
     }
 }

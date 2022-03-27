@@ -20,7 +20,8 @@
 
     <GridView
         android:id="@+id/gridview_traicay"
-        android:numColumns="3"
+        android:numColumns="2"
+        android:columnWidth="200dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
