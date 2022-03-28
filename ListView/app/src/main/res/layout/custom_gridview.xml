@@ -26,14 +26,14 @@
                 <TextView
                     android:id="@+id/textview_tensanpham"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/imageview_hinhsanpham"
                     android:gravity="center"
                     android:hint="ten san pham"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:textColor="#00BCD4"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -48,7 +48,7 @@
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:textColor="#D41500"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
         </RelativeLayout>
 
 
