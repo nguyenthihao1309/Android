@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.example.listview.FragmentSanPhamListView"
+        android:layout_width="0dp"
+        android:layout_weight="4.5"
+        android:layout_height="match_parent"
+        tools:layout="@layout/layout_listview_item" />
+
+
+    <fragment
+        android:id="@+id/fragmentInfo"
+        android:name="com.example.listview.FragmentSanPhamInfo"
+        android:layout_width="0dp"
+        android:layout_weight="5.5"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_sanpham_info" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="350dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="50dp"
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:id="@+id/imageview_nhan_hinhsp"
+        android:background="@color/background_image"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:padding="50dp"
+        android:src="@drawable/shoes_nike"
+        android:layout_height="250dp"/>
+
+    <ScrollView
+        android:background="@color/background_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textview_nhan_thongtin"
+            android:layout_width="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="adidas Women's Stan Smith\nLow Top Fashion Sneakers\nShoes\nSole: Rubber\nClosure: Lace-UpShoe\nWidth: Medium\nLace Up\nGrip Rubber Sole\nPadded Insole"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+</LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.listview;
 
-public class SanPham {
+import java.io.Serializable;
+
+public class SanPham implements Serializable {
     private int maSanPham;
     private String tenSanPham;
     private int hinhAnh;
@@ -64,7 +66,6 @@ public class SanPham {
         this.hinhAnh = hinhAnh;
         this.giaSanPham = giaSanPham;
     }
-
 
 
     @Override

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/custom_gridview_item"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:paddingLeft="2dp"
+    android:paddingTop="5dp"
+    android:paddingRight="2dp"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imageview_hinhsanpham"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/border_radius_image"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/lavie" />
+
+        <TextView
+            android:id="@+id/textview_tensanpham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_hinhsanpham"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:hint="ten san pham"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textview_giasanpham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_tensanpham"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:gravity="top|center"
+            android:hint="gia san pham"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#E6E93838"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
