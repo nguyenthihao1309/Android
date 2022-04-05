@@ -1,9 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".SecondActivity">
+    
+    <ImageView
+        android:id="@+id/imageview_ct_anhsp"
+        android:src="@drawable/pink_donut"
+        android:layout_gravity="center"
+        android:layout_width="272dp"
+        android:layout_height="320dp"/>
+    <TextView
+        android:id="@+id/textview_ct_ten"
+        android:text="Pink Donut"
+        android:fontFamily="@font/roboto"
+        android:textSize="20sp"
+        android:textFontWeight="700"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/textview_mota"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="Spicy tasty donut family"
+            android:textColor="#8A000000"
+            android:textFontWeight="700"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="$20.00"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageview_lock"
+            android:src="@drawable/vector"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/textview_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imageview_lock"
+            android:fontFamily="@font/roboto"
+            android:text="Delivery"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/textview_gio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_delivery"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imageview_lock"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:text="30 min"
+            android:textFontWeight="700"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/textview_gio"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageview_tru"
+                android:src="@drawable/group16"
+                android:layout_width="36dp"
+                android:layout_height="36dp"/>
+            <TextView
+                android:id="@+id/textview_tinhsoluong"
+                android:text="1"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto"
+                android:textFontWeight="700"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="36dp"
+                android:layout_height="36dp"/>
+            <ImageView
+                android:id="@+id/imageview_cong"
+                android:src="@drawable/group15"
+                android:layout_width="36dp"
+                android:layout_height="36dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:text="Restaurants info"
+        android:fontFamily="@font/roboto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."
+        android:textColor="#AB000000"
+        android:layout_width="match_parent"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="700"
+        android:layout_height="81dp"
+        android:layout_marginTop="10dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/border_button_yellow"
+        android:text="Add to cart"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="700"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

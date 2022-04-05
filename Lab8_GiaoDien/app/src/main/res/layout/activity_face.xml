@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaceActivity">
+
+    <TextView
+        android:text="Please touch one!"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#B02D58F3"
+        android:fontFamily="sans-serif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_group_green"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="124dp"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_group_yellow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_group_red"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="124dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/button_signin"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:text="finish"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-150dp"
+        android:background="@drawable/shape_bottom"
+        android:scaleX="2" />
+
+</RelativeLayout>

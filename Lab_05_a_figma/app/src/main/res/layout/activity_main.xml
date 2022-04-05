@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Jala!"
+        android:textColor="#A6000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Choice you Best food"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edittext_search"
+        android:layout_width="266dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/border_edittext"
+        android:hint="Search food"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_donut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_yellow"
+            android:text="Donut"
+            android:layout_marginEnd="17dp"
+            android:layout_weight="1"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_pink_donut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_gray"
+            android:text="Pink Donut"
+            android:layout_marginEnd="17dp"
+            android:layout_weight="1"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_floating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_gray"
+            android:text="Floating"
+            android:layout_weight="1"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

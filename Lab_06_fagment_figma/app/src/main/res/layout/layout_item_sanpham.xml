@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@drawable/custom_item_listview"
+    android:paddingLeft="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="72dp">
+
+    <ImageView
+        android:id="@+id/textview_itemlist_hinh"
+        android:src="@drawable/shoes_nike"
+        android:layout_gravity="center"
+        android:layout_width="69dp"
+        android:layout_height="69dp"/>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textview_itemlist_motasp"
+            android:text="Nike shoes-discount 50%"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <TextView
+            android:id="@+id/textview_itemlist_touch"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/detail"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

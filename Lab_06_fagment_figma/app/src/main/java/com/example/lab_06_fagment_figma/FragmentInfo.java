@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 
-public class FragmentInfoLandscape extends Fragment {
+public class FragmentInfo extends Fragment {
     ImageView imgvAnh;
     View view;
 
@@ -21,7 +21,8 @@ public class FragmentInfoLandscape extends Fragment {
 
         return view;
     }
-    public void setInfo(Shoe shoe){
+
+    public void setInfo(Shoe shoe) {
         imgvAnh.setImageResource(shoe.getImage());
     }
 
