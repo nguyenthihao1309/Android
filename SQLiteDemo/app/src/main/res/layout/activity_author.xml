@@ -22,6 +22,7 @@
         <EditText
             android:id="@+id/edittext_id"
             android:layout_width="150dp"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:hint="Enter ID"
             android:textColor="@color/black" />
@@ -45,6 +46,7 @@
         android:id="@+id/edittext_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
         android:hint="Enter email"
         android:textColor="@color/black" />
 
