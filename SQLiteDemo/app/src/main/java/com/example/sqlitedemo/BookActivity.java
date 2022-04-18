@@ -37,7 +37,7 @@ public class BookActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 etId.setText(books.get(position / 3).getId() + "");
                 etTitle.setText(books.get(position / 3).getTitle());
-                etId_Author.setText(books.get(position / 3).getId_author());
+                etId_Author.setText(books.get(position / 3).getId_author()+"");
             }
         });
 
@@ -120,9 +120,8 @@ public class BookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int id = Integer.parseInt(etId.getText().toString().trim());
-                if (dbHelper.deleteAuthor(id) > 0) {
+                if (dbHelper.deleteBook(id) > 0) {
                     books = dbHelper.getAllBooks();
-
                     taoAdapterBook(books);
                     xoaText();
                 } else {

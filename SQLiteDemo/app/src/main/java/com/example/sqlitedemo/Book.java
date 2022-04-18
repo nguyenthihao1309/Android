@@ -6,9 +6,9 @@ public class Book {
     private int id_author;
 
     public Book(int id, String title, int id_author) {
-        this.id = 0;
-        this.title = null;
-        this.id_author = 0;
+        this.id = id;
+        this.title = title;
+        this.id_author = id_author;
     }
 
     public Book() {
