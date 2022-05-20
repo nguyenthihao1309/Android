@@ -1,21 +1,25 @@
 package com.example.testlistview;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
-/**
+/*
+ *
  * A simple {@link Fragment} subclass.
  * Use the {@link SettingOptionsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class SettingOptionsFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
+  /*  // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -28,14 +32,17 @@ public class SettingOptionsFragment extends Fragment {
         // Required empty public constructor
     }
 
+//    */
+
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SettingOptionsFragment.
-     */
+     * //     * Use this factory method to create a new instance of
+     * //     * this fragment using the provided parameters.
+     * //     *
+     * //     * @param param1 Parameter 1.
+     * //     * @param param2 Parameter 2.
+     * //     * @return A new instance of fragment SettingOptionsFragment.
+     * //
+     *//*
     // TODO: Rename and change types and number of parameters
     public static SettingOptionsFragment newInstance(String param1, String param2) {
         SettingOptionsFragment fragment = new SettingOptionsFragment();
@@ -56,9 +63,57 @@ public class SettingOptionsFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+    }*/
+
+    interface OnOptionClickListener {
+        void onOptionSelected(String option);
+    }
+
+    private OnOptionClickListener mCallback;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            mCallback = (OnOptionClickListener) context;
+        } catch (Exception e) {
+            throw new ClassCastException(context.toString() + " must implement SettingOptionsFragment.OnOptionClickListener");
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting_options, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_setting_options, container, false);
+
+        LinearLayout mNetworkOption = rootView.findViewById(R.id.networkOption);
+        LinearLayout mStorageOption = rootView.findViewById(R.id.storageOption);
+        LinearLayout mDisplayOption = rootView.findViewById(R.id.displayOption);
+
+        mNetworkOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.onOptionSelected("network");
+            }
+        });
+
+        mStorageOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.onOptionSelected("storage");
+            }
+        });
+
+        mDisplayOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.onOptionSelected("display");
+            }
+        });
+
+        return rootView;
     }
 }

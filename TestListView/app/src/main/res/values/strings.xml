@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestListView</string>
+    <string name="network">Network</string>
+    <string name="display">Display</string>
+    <string name="storage">Storage</string>
+    <string name="network_description">Network Description</string>
+    <string name="display_description">Display Description</string>
+    <string name="storage_description">Storage Description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
